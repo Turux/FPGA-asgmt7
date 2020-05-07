@@ -1,0 +1,7 @@
+
+State Machine - |SAS|FSM:SM|current_state
+Name current_state.DISPLAY current_state.START current_state.STOP current_state.IDLE 
+current_state.IDLE 0 0 0 0 
+current_state.STOP 0 0 1 1 
+current_state.START 0 1 0 1 
+current_state.DISPLAY 1 0 0 1 

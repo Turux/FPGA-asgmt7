@@ -1,0 +1,287 @@
+Analysis & Synthesis report for lab7
+Thu Nov 26 10:58:34 2015
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |SAS|FSM:SM|current_state
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
+ 11. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 26 10:58:34 2015    ;
+; Quartus II Version                 ; 7.1 Build 156 04/30/2007 SJ Full Version ;
+; Revision Name                      ; lab7                                     ;
+; Top-level Entity Name              ; SAS                                      ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 50                                       ;
+;     Total combinational functions  ; 50                                       ;
+;     Dedicated logic registers      ; 36                                       ;
+; Total registers                    ; 36                                       ;
+; Total pins                         ; 4                                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                          ; SAS                ; lab7               ;
+; Family name                                                                    ; Cyclone II         ; Stratix II         ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; DSP Block Balancing                                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II/Cyclone III                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Use smart compilation                                                          ; Off                ; Off                ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                  ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+
+; counter.v                        ; yes             ; User Verilog HDL File  ; H:/Workspaces/QII/lab7/counter.v          ;
+; sensor_interface.v               ; yes             ; User Verilog HDL File  ; H:/Workspaces/QII/lab7/sensor_interface.v ;
+; sign.v                           ; yes             ; User Verilog HDL File  ; H:/Workspaces/QII/lab7/sign.v             ;
+; FSM.v                            ; yes             ; User Verilog HDL File  ; H:/Workspaces/QII/lab7/FSM.v              ;
+; SAS.v                            ; yes             ; User Verilog HDL File  ; H:/Workspaces/QII/lab7/SAS.v              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 50    ;
+;                                             ;       ;
+; Total combinational functions               ; 50    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 16    ;
+;     -- 3 input functions                    ; 1     ;
+;     -- <=2 input functions                  ; 33    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 19    ;
+;     -- arithmetic mode                      ; 31    ;
+;                                             ;       ;
+; Total registers                             ; 36    ;
+;     -- Dedicated logic registers            ; 36    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 4     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 36    ;
+; Total fan-out                               ; 237   ;
+; Average fan-out                             ; 2.63  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+; |SAS                       ; 50 (0)            ; 36 (0)       ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |SAS                 ; work         ;
+;    |FSM:SM|                ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SAS|FSM:SM          ; work         ;
+;    |counter:Counter|       ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SAS|counter:Counter ; work         ;
+;    |sign:Sign|             ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SAS|sign:Sign       ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------+
+; State Machine - |SAS|FSM:SM|current_state                                                                     ;
++-----------------------+-----------------------+---------------------+--------------------+--------------------+
+; Name                  ; current_state.DISPLAY ; current_state.START ; current_state.STOP ; current_state.IDLE ;
++-----------------------+-----------------------+---------------------+--------------------+--------------------+
+; current_state.IDLE    ; 0                     ; 0                   ; 0                  ; 0                  ;
+; current_state.STOP    ; 0                     ; 0                   ; 1                  ; 1                  ;
+; current_state.START   ; 0                     ; 1                   ; 0                  ; 1                  ;
+; current_state.DISPLAY ; 1                     ; 0                   ; 0                  ; 1                  ;
++-----------------------+-----------------------+---------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; SM/current_state~7                    ; Lost fanout        ;
+; SM/current_state~8                    ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 7.1 Build 156 04/30/2007 SJ Full Version
+    Info: Processing started: Thu Nov 26 10:58:32 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab7 -c lab7
+Warning: Ignored assignments for entity "SAS" -- entity does not exist in design
+    Warning: Assignment of entity set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS REPLACE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -section_id Top is ignored
+Info: Found 1 design units, including 1 entities, in source file counter.v
+    Info: Found entity 1: counter
+Info: Found 1 design units, including 1 entities, in source file sensor_interface.v
+    Info: Found entity 1: sensor_interface
+Info: Found 1 design units, including 1 entities, in source file sign.v
+    Info: Found entity 1: sign
+Info: Found 1 design units, including 1 entities, in source file FSM.v
+    Info: Found entity 1: FSM
+Info: Found 1 design units, including 1 entities, in source file SAS.v
+    Info: Found entity 1: SAS
+Info: Elaborating entity "SAS" for the top level hierarchy
+Info: Elaborating entity "sensor_interface" for hierarchy "sensor_interface:Sensor"
+Warning (10230): Verilog HDL assignment warning at sensor_interface.v(9): truncated value with size 32 to match size of target (1)
+Info: Elaborating entity "FSM" for hierarchy "FSM:SM"
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(48): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at FSM.v(55): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info: Elaborating entity "counter" for hierarchy "counter:Counter"
+Info: Elaborating entity "sign" for hierarchy "sign:Sign"
+Warning (10235): Verilog HDL Always Construct warning at sign.v(13): variable "timeout" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at sign.v(13): truncated value with size 32 to match size of target (1)
+Info: State machine "|SAS|FSM:SM|current_state" contains 4 states
+Info: Selected Auto state machine encoding method for state machine "|SAS|FSM:SM|current_state"
+Info: Encoding result for state machine "|SAS|FSM:SM|current_state"
+    Info: Completed encoding using 4 state bits
+        Info: Encoded state bit "FSM:SM|current_state.DISPLAY"
+        Info: Encoded state bit "FSM:SM|current_state.START"
+        Info: Encoded state bit "FSM:SM|current_state.STOP"
+        Info: Encoded state bit "FSM:SM|current_state.IDLE"
+    Info: State "|SAS|FSM:SM|current_state.IDLE" uses code string "0000"
+    Info: State "|SAS|FSM:SM|current_state.STOP" uses code string "0011"
+    Info: State "|SAS|FSM:SM|current_state.START" uses code string "0101"
+    Info: State "|SAS|FSM:SM|current_state.DISPLAY" uses code string "1001"
+Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
+    Info: Register "SM/current_state~7" lost all its fanouts during netlist optimizations.
+    Info: Register "SM/current_state~8" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file H:/Workspaces/QII/lab7/lab7.map.smsg
+Info: Implemented 54 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 1 output pins
+    Info: Implemented 50 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Allocated 190 megabytes of memory during processing
+    Info: Processing ended: Thu Nov 26 10:58:34 2015
+    Info: Elapsed time: 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in H:/Workspaces/QII/lab7/lab7.map.smsg.
+
+

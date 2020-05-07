@@ -1,0 +1,552 @@
+Simulator report for lab7
+Thu Nov 26 10:56:38 2015
+Quartus II Version 7.1 Build 156 04/30/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 273 nodes    ;
+; Simulation Coverage         ;      52.38 % ;
+; Total Number of Transitions ; 9046         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Functional    ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; Tests/SAS.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      52.38 % ;
+; Total nodes checked                                 ; 273          ;
+; Total output ports checked                          ; 273          ;
+; Total output ports with complete 1/0-value coverage ; 143          ;
+; Total output ports with no 1/0-value coverage       ; 119          ;
+; Total output ports with no 1-value coverage         ; 121          ;
+; Total output ports with no 0-value coverage         ; 128          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |SAS|sensor1                       ; |SAS|sensor1                       ; out              ;
+; |SAS|sensor2                       ; |SAS|sensor2                       ; out              ;
+; |SAS|clk                           ; |SAS|clk                           ; out              ;
+; |SAS|led                           ; |SAS|led                           ; pin_out          ;
+; |SAS|sign:Sign|sign~0              ; |SAS|sign:Sign|sign~0              ; out0             ;
+; |SAS|sign:Sign|sign                ; |SAS|sign:Sign|sign                ; out              ;
+; |SAS|counter:Counter|count~23      ; |SAS|counter:Counter|count~23      ; out              ;
+; |SAS|counter:Counter|count~24      ; |SAS|counter:Counter|count~24      ; out              ;
+; |SAS|counter:Counter|count~25      ; |SAS|counter:Counter|count~25      ; out              ;
+; |SAS|counter:Counter|count~26      ; |SAS|counter:Counter|count~26      ; out              ;
+; |SAS|counter:Counter|count~27      ; |SAS|counter:Counter|count~27      ; out              ;
+; |SAS|counter:Counter|count~28      ; |SAS|counter:Counter|count~28      ; out              ;
+; |SAS|counter:Counter|count~29      ; |SAS|counter:Counter|count~29      ; out              ;
+; |SAS|counter:Counter|count~30      ; |SAS|counter:Counter|count~30      ; out              ;
+; |SAS|counter:Counter|count~31      ; |SAS|counter:Counter|count~31      ; out              ;
+; |SAS|counter:Counter|count[7]      ; |SAS|counter:Counter|count[7]      ; regout           ;
+; |SAS|counter:Counter|count[6]      ; |SAS|counter:Counter|count[6]      ; regout           ;
+; |SAS|counter:Counter|count[5]      ; |SAS|counter:Counter|count[5]      ; regout           ;
+; |SAS|counter:Counter|count[4]      ; |SAS|counter:Counter|count[4]      ; regout           ;
+; |SAS|counter:Counter|count[3]      ; |SAS|counter:Counter|count[3]      ; regout           ;
+; |SAS|counter:Counter|count[2]      ; |SAS|counter:Counter|count[2]      ; regout           ;
+; |SAS|counter:Counter|count[1]      ; |SAS|counter:Counter|count[1]      ; regout           ;
+; |SAS|counter:Counter|count[0]      ; |SAS|counter:Counter|count[0]      ; regout           ;
+; |SAS|FSM:SM|sign_timeout~0         ; |SAS|FSM:SM|sign_timeout~0         ; out0             ;
+; |SAS|FSM:SM|sign_timeout[5]        ; |SAS|FSM:SM|sign_timeout[5]        ; out              ;
+; |SAS|FSM:SM|current_state.DISPLAY  ; |SAS|FSM:SM|current_state.DISPLAY  ; regout           ;
+; |SAS|FSM:SM|current_state.STOP     ; |SAS|FSM:SM|current_state.STOP     ; regout           ;
+; |SAS|FSM:SM|sign_timeout[3]        ; |SAS|FSM:SM|sign_timeout[3]        ; out              ;
+; |SAS|FSM:SM|current_state.START    ; |SAS|FSM:SM|current_state.START    ; regout           ;
+; |SAS|FSM:SM|current_state.IDLE     ; |SAS|FSM:SM|current_state.IDLE     ; regout           ;
+; |SAS|FSM:SM|next_state.STOP        ; |SAS|FSM:SM|next_state.STOP        ; out              ;
+; |SAS|FSM:SM|current_state~0        ; |SAS|FSM:SM|current_state~0        ; out0             ;
+; |SAS|sensor_interface:Sensor|start ; |SAS|sensor_interface:Sensor|start ; out              ;
+; |SAS|FSM:SM|Selector0~4            ; |SAS|FSM:SM|Selector0~4            ; out0             ;
+; |SAS|FSM:SM|Selector0~5            ; |SAS|FSM:SM|Selector0~5            ; out0             ;
+; |SAS|FSM:SM|Selector1~4            ; |SAS|FSM:SM|Selector1~4            ; out0             ;
+; |SAS|FSM:SM|Selector1~5            ; |SAS|FSM:SM|Selector1~5            ; out0             ;
+; |SAS|FSM:SM|Selector2~4            ; |SAS|FSM:SM|Selector2~4            ; out0             ;
+; |SAS|FSM:SM|Selector2~5            ; |SAS|FSM:SM|Selector2~5            ; out0             ;
+; |SAS|FSM:SM|Selector2~6            ; |SAS|FSM:SM|Selector2~6            ; out0             ;
+; |SAS|sign:Sign|LessThan0~129       ; |SAS|sign:Sign|LessThan0~129       ; out0             ;
+; |SAS|sign:Sign|LessThan0~130       ; |SAS|sign:Sign|LessThan0~130       ; out0             ;
+; |SAS|sign:Sign|LessThan0~131       ; |SAS|sign:Sign|LessThan0~131       ; out0             ;
+; |SAS|sign:Sign|LessThan0~132       ; |SAS|sign:Sign|LessThan0~132       ; out0             ;
+; |SAS|sign:Sign|LessThan0~133       ; |SAS|sign:Sign|LessThan0~133       ; out0             ;
+; |SAS|sign:Sign|LessThan0~134       ; |SAS|sign:Sign|LessThan0~134       ; out0             ;
+; |SAS|sign:Sign|LessThan0~135       ; |SAS|sign:Sign|LessThan0~135       ; out0             ;
+; |SAS|sign:Sign|LessThan0~136       ; |SAS|sign:Sign|LessThan0~136       ; out0             ;
+; |SAS|sign:Sign|LessThan0~137       ; |SAS|sign:Sign|LessThan0~137       ; out0             ;
+; |SAS|sign:Sign|LessThan0~138       ; |SAS|sign:Sign|LessThan0~138       ; out0             ;
+; |SAS|sign:Sign|LessThan0~139       ; |SAS|sign:Sign|LessThan0~139       ; out0             ;
+; |SAS|sign:Sign|LessThan0~140       ; |SAS|sign:Sign|LessThan0~140       ; out0             ;
+; |SAS|sign:Sign|LessThan0~141       ; |SAS|sign:Sign|LessThan0~141       ; out0             ;
+; |SAS|sign:Sign|LessThan0~142       ; |SAS|sign:Sign|LessThan0~142       ; out0             ;
+; |SAS|sign:Sign|LessThan0~143       ; |SAS|sign:Sign|LessThan0~143       ; out0             ;
+; |SAS|sign:Sign|LessThan0~144       ; |SAS|sign:Sign|LessThan0~144       ; out0             ;
+; |SAS|sign:Sign|LessThan0~145       ; |SAS|sign:Sign|LessThan0~145       ; out0             ;
+; |SAS|sign:Sign|LessThan0~146       ; |SAS|sign:Sign|LessThan0~146       ; out0             ;
+; |SAS|sign:Sign|LessThan0~147       ; |SAS|sign:Sign|LessThan0~147       ; out0             ;
+; |SAS|sign:Sign|LessThan0~148       ; |SAS|sign:Sign|LessThan0~148       ; out0             ;
+; |SAS|sign:Sign|LessThan0~149       ; |SAS|sign:Sign|LessThan0~149       ; out0             ;
+; |SAS|sign:Sign|LessThan0~150       ; |SAS|sign:Sign|LessThan0~150       ; out0             ;
+; |SAS|sign:Sign|LessThan0~151       ; |SAS|sign:Sign|LessThan0~151       ; out0             ;
+; |SAS|sign:Sign|LessThan0~152       ; |SAS|sign:Sign|LessThan0~152       ; out0             ;
+; |SAS|sign:Sign|LessThan0~153       ; |SAS|sign:Sign|LessThan0~153       ; out0             ;
+; |SAS|sign:Sign|LessThan0~154       ; |SAS|sign:Sign|LessThan0~154       ; out0             ;
+; |SAS|sign:Sign|LessThan0~155       ; |SAS|sign:Sign|LessThan0~155       ; out0             ;
+; |SAS|sign:Sign|LessThan0~156       ; |SAS|sign:Sign|LessThan0~156       ; out0             ;
+; |SAS|sign:Sign|LessThan0~157       ; |SAS|sign:Sign|LessThan0~157       ; out0             ;
+; |SAS|sign:Sign|LessThan0~158       ; |SAS|sign:Sign|LessThan0~158       ; out0             ;
+; |SAS|sign:Sign|LessThan0~159       ; |SAS|sign:Sign|LessThan0~159       ; out0             ;
+; |SAS|sign:Sign|LessThan1~132       ; |SAS|sign:Sign|LessThan1~132       ; out0             ;
+; |SAS|sign:Sign|LessThan1~134       ; |SAS|sign:Sign|LessThan1~134       ; out0             ;
+; |SAS|sign:Sign|LessThan1~135       ; |SAS|sign:Sign|LessThan1~135       ; out0             ;
+; |SAS|sign:Sign|LessThan1~136       ; |SAS|sign:Sign|LessThan1~136       ; out0             ;
+; |SAS|sign:Sign|LessThan1~137       ; |SAS|sign:Sign|LessThan1~137       ; out0             ;
+; |SAS|sign:Sign|LessThan1~138       ; |SAS|sign:Sign|LessThan1~138       ; out0             ;
+; |SAS|sign:Sign|LessThan1~139       ; |SAS|sign:Sign|LessThan1~139       ; out0             ;
+; |SAS|sign:Sign|LessThan1~140       ; |SAS|sign:Sign|LessThan1~140       ; out0             ;
+; |SAS|sign:Sign|LessThan1~141       ; |SAS|sign:Sign|LessThan1~141       ; out0             ;
+; |SAS|sign:Sign|LessThan1~142       ; |SAS|sign:Sign|LessThan1~142       ; out0             ;
+; |SAS|sign:Sign|LessThan1~143       ; |SAS|sign:Sign|LessThan1~143       ; out0             ;
+; |SAS|sign:Sign|LessThan1~144       ; |SAS|sign:Sign|LessThan1~144       ; out0             ;
+; |SAS|sign:Sign|LessThan1~145       ; |SAS|sign:Sign|LessThan1~145       ; out0             ;
+; |SAS|sign:Sign|LessThan1~146       ; |SAS|sign:Sign|LessThan1~146       ; out0             ;
+; |SAS|sign:Sign|LessThan1~147       ; |SAS|sign:Sign|LessThan1~147       ; out0             ;
+; |SAS|sign:Sign|LessThan1~148       ; |SAS|sign:Sign|LessThan1~148       ; out0             ;
+; |SAS|sign:Sign|LessThan1~149       ; |SAS|sign:Sign|LessThan1~149       ; out0             ;
+; |SAS|sign:Sign|LessThan1~150       ; |SAS|sign:Sign|LessThan1~150       ; out0             ;
+; |SAS|sign:Sign|LessThan1~151       ; |SAS|sign:Sign|LessThan1~151       ; out0             ;
+; |SAS|sign:Sign|LessThan1~152       ; |SAS|sign:Sign|LessThan1~152       ; out0             ;
+; |SAS|sign:Sign|LessThan1~153       ; |SAS|sign:Sign|LessThan1~153       ; out0             ;
+; |SAS|sign:Sign|LessThan1~154       ; |SAS|sign:Sign|LessThan1~154       ; out0             ;
+; |SAS|sign:Sign|LessThan1~155       ; |SAS|sign:Sign|LessThan1~155       ; out0             ;
+; |SAS|sign:Sign|LessThan1~156       ; |SAS|sign:Sign|LessThan1~156       ; out0             ;
+; |SAS|sign:Sign|LessThan1~157       ; |SAS|sign:Sign|LessThan1~157       ; out0             ;
+; |SAS|sign:Sign|LessThan1~158       ; |SAS|sign:Sign|LessThan1~158       ; out0             ;
+; |SAS|sign:Sign|LessThan1~159       ; |SAS|sign:Sign|LessThan1~159       ; out0             ;
+; |SAS|sign:Sign|LessThan1~160       ; |SAS|sign:Sign|LessThan1~160       ; out0             ;
+; |SAS|sign:Sign|LessThan1~161       ; |SAS|sign:Sign|LessThan1~161       ; out0             ;
+; |SAS|sign:Sign|LessThan1~162       ; |SAS|sign:Sign|LessThan1~162       ; out0             ;
+; |SAS|sign:Sign|LessThan1~163       ; |SAS|sign:Sign|LessThan1~163       ; out0             ;
+; |SAS|sign:Sign|LessThan1~164       ; |SAS|sign:Sign|LessThan1~164       ; out0             ;
+; |SAS|sign:Sign|LessThan1~165       ; |SAS|sign:Sign|LessThan1~165       ; out0             ;
+; |SAS|sign:Sign|LessThan1~166       ; |SAS|sign:Sign|LessThan1~166       ; out0             ;
+; |SAS|sign:Sign|LessThan1~167       ; |SAS|sign:Sign|LessThan1~167       ; out0             ;
+; |SAS|sign:Sign|LessThan1~168       ; |SAS|sign:Sign|LessThan1~168       ; out0             ;
+; |SAS|sign:Sign|LessThan1~169       ; |SAS|sign:Sign|LessThan1~169       ; out0             ;
+; |SAS|sign:Sign|LessThan1~170       ; |SAS|sign:Sign|LessThan1~170       ; out0             ;
+; |SAS|sign:Sign|LessThan1~171       ; |SAS|sign:Sign|LessThan1~171       ; out0             ;
+; |SAS|sign:Sign|LessThan1~172       ; |SAS|sign:Sign|LessThan1~172       ; out0             ;
+; |SAS|sign:Sign|LessThan1~173       ; |SAS|sign:Sign|LessThan1~173       ; out0             ;
+; |SAS|sign:Sign|LessThan1~174       ; |SAS|sign:Sign|LessThan1~174       ; out0             ;
+; |SAS|sign:Sign|LessThan1~175       ; |SAS|sign:Sign|LessThan1~175       ; out0             ;
+; |SAS|sign:Sign|LessThan1~176       ; |SAS|sign:Sign|LessThan1~176       ; out0             ;
+; |SAS|sign:Sign|LessThan1~177       ; |SAS|sign:Sign|LessThan1~177       ; out0             ;
+; |SAS|sign:Sign|LessThan1~178       ; |SAS|sign:Sign|LessThan1~178       ; out0             ;
+; |SAS|sign:Sign|LessThan1~179       ; |SAS|sign:Sign|LessThan1~179       ; out0             ;
+; |SAS|sign:Sign|LessThan1~180       ; |SAS|sign:Sign|LessThan1~180       ; out0             ;
+; |SAS|sign:Sign|LessThan1~181       ; |SAS|sign:Sign|LessThan1~181       ; out0             ;
+; |SAS|sign:Sign|LessThan1~182       ; |SAS|sign:Sign|LessThan1~182       ; out0             ;
+; |SAS|sign:Sign|LessThan1~183       ; |SAS|sign:Sign|LessThan1~183       ; out0             ;
+; |SAS|sign:Sign|LessThan1~184       ; |SAS|sign:Sign|LessThan1~184       ; out0             ;
+; |SAS|sign:Sign|LessThan1~185       ; |SAS|sign:Sign|LessThan1~185       ; out0             ;
+; |SAS|sign:Sign|LessThan1~186       ; |SAS|sign:Sign|LessThan1~186       ; out0             ;
+; |SAS|sign:Sign|LessThan1~187       ; |SAS|sign:Sign|LessThan1~187       ; out0             ;
+; |SAS|sign:Sign|LessThan1~188       ; |SAS|sign:Sign|LessThan1~188       ; out0             ;
+; |SAS|sign:Sign|LessThan1~189       ; |SAS|sign:Sign|LessThan1~189       ; out0             ;
+; |SAS|counter:Counter|Add0~160      ; |SAS|counter:Counter|Add0~160      ; out0             ;
+; |SAS|counter:Counter|Add0~161      ; |SAS|counter:Counter|Add0~161      ; out0             ;
+; |SAS|counter:Counter|Add0~162      ; |SAS|counter:Counter|Add0~162      ; out0             ;
+; |SAS|counter:Counter|Add0~163      ; |SAS|counter:Counter|Add0~163      ; out0             ;
+; |SAS|counter:Counter|Add0~164      ; |SAS|counter:Counter|Add0~164      ; out0             ;
+; |SAS|counter:Counter|Add0~165      ; |SAS|counter:Counter|Add0~165      ; out0             ;
+; |SAS|counter:Counter|Add0~166      ; |SAS|counter:Counter|Add0~166      ; out0             ;
+; |SAS|counter:Counter|Add0~167      ; |SAS|counter:Counter|Add0~167      ; out0             ;
+; |SAS|counter:Counter|Add0~168      ; |SAS|counter:Counter|Add0~168      ; out0             ;
+; |SAS|counter:Counter|Add0~169      ; |SAS|counter:Counter|Add0~169      ; out0             ;
+; |SAS|counter:Counter|Add0~170      ; |SAS|counter:Counter|Add0~170      ; out0             ;
+; |SAS|counter:Counter|Add0~171      ; |SAS|counter:Counter|Add0~171      ; out0             ;
+; |SAS|counter:Counter|Add0~172      ; |SAS|counter:Counter|Add0~172      ; out0             ;
+; |SAS|counter:Counter|Add0~173      ; |SAS|counter:Counter|Add0~173      ; out0             ;
+; |SAS|counter:Counter|Add0~174      ; |SAS|counter:Counter|Add0~174      ; out0             ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |SAS|counter:Counter|count~0   ; |SAS|counter:Counter|count~0   ; out              ;
+; |SAS|counter:Counter|count~1   ; |SAS|counter:Counter|count~1   ; out              ;
+; |SAS|counter:Counter|count~2   ; |SAS|counter:Counter|count~2   ; out              ;
+; |SAS|counter:Counter|count~3   ; |SAS|counter:Counter|count~3   ; out              ;
+; |SAS|counter:Counter|count~4   ; |SAS|counter:Counter|count~4   ; out              ;
+; |SAS|counter:Counter|count~5   ; |SAS|counter:Counter|count~5   ; out              ;
+; |SAS|counter:Counter|count~6   ; |SAS|counter:Counter|count~6   ; out              ;
+; |SAS|counter:Counter|count~7   ; |SAS|counter:Counter|count~7   ; out              ;
+; |SAS|counter:Counter|count~8   ; |SAS|counter:Counter|count~8   ; out              ;
+; |SAS|counter:Counter|count~9   ; |SAS|counter:Counter|count~9   ; out              ;
+; |SAS|counter:Counter|count~10  ; |SAS|counter:Counter|count~10  ; out              ;
+; |SAS|counter:Counter|count~11  ; |SAS|counter:Counter|count~11  ; out              ;
+; |SAS|counter:Counter|count~12  ; |SAS|counter:Counter|count~12  ; out              ;
+; |SAS|counter:Counter|count~13  ; |SAS|counter:Counter|count~13  ; out              ;
+; |SAS|counter:Counter|count~14  ; |SAS|counter:Counter|count~14  ; out              ;
+; |SAS|counter:Counter|count~15  ; |SAS|counter:Counter|count~15  ; out              ;
+; |SAS|counter:Counter|count~16  ; |SAS|counter:Counter|count~16  ; out              ;
+; |SAS|counter:Counter|count~17  ; |SAS|counter:Counter|count~17  ; out              ;
+; |SAS|counter:Counter|count~18  ; |SAS|counter:Counter|count~18  ; out              ;
+; |SAS|counter:Counter|count~19  ; |SAS|counter:Counter|count~19  ; out              ;
+; |SAS|counter:Counter|count~20  ; |SAS|counter:Counter|count~20  ; out              ;
+; |SAS|counter:Counter|count~21  ; |SAS|counter:Counter|count~21  ; out              ;
+; |SAS|counter:Counter|count~22  ; |SAS|counter:Counter|count~22  ; out              ;
+; |SAS|counter:Counter|count[9]  ; |SAS|counter:Counter|count[9]  ; regout           ;
+; |SAS|counter:Counter|count[10] ; |SAS|counter:Counter|count[10] ; regout           ;
+; |SAS|counter:Counter|count[11] ; |SAS|counter:Counter|count[11] ; regout           ;
+; |SAS|counter:Counter|count[12] ; |SAS|counter:Counter|count[12] ; regout           ;
+; |SAS|counter:Counter|count[13] ; |SAS|counter:Counter|count[13] ; regout           ;
+; |SAS|counter:Counter|count[14] ; |SAS|counter:Counter|count[14] ; regout           ;
+; |SAS|counter:Counter|count[15] ; |SAS|counter:Counter|count[15] ; regout           ;
+; |SAS|counter:Counter|count[16] ; |SAS|counter:Counter|count[16] ; regout           ;
+; |SAS|counter:Counter|count[17] ; |SAS|counter:Counter|count[17] ; regout           ;
+; |SAS|counter:Counter|count[18] ; |SAS|counter:Counter|count[18] ; regout           ;
+; |SAS|counter:Counter|count[19] ; |SAS|counter:Counter|count[19] ; regout           ;
+; |SAS|counter:Counter|count[20] ; |SAS|counter:Counter|count[20] ; regout           ;
+; |SAS|counter:Counter|count[21] ; |SAS|counter:Counter|count[21] ; regout           ;
+; |SAS|counter:Counter|count[22] ; |SAS|counter:Counter|count[22] ; regout           ;
+; |SAS|counter:Counter|count[23] ; |SAS|counter:Counter|count[23] ; regout           ;
+; |SAS|counter:Counter|count[24] ; |SAS|counter:Counter|count[24] ; regout           ;
+; |SAS|counter:Counter|count[25] ; |SAS|counter:Counter|count[25] ; regout           ;
+; |SAS|counter:Counter|count[26] ; |SAS|counter:Counter|count[26] ; regout           ;
+; |SAS|counter:Counter|count[27] ; |SAS|counter:Counter|count[27] ; regout           ;
+; |SAS|counter:Counter|count[28] ; |SAS|counter:Counter|count[28] ; regout           ;
+; |SAS|counter:Counter|count[29] ; |SAS|counter:Counter|count[29] ; regout           ;
+; |SAS|counter:Counter|count[30] ; |SAS|counter:Counter|count[30] ; regout           ;
+; |SAS|counter:Counter|count[31] ; |SAS|counter:Counter|count[31] ; regout           ;
+; |SAS|FSM:SM|sign_timeout[31]   ; |SAS|FSM:SM|sign_timeout[31]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[30]   ; |SAS|FSM:SM|sign_timeout[30]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[29]   ; |SAS|FSM:SM|sign_timeout[29]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[28]   ; |SAS|FSM:SM|sign_timeout[28]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[27]   ; |SAS|FSM:SM|sign_timeout[27]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[26]   ; |SAS|FSM:SM|sign_timeout[26]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[25]   ; |SAS|FSM:SM|sign_timeout[25]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[24]   ; |SAS|FSM:SM|sign_timeout[24]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[23]   ; |SAS|FSM:SM|sign_timeout[23]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[22]   ; |SAS|FSM:SM|sign_timeout[22]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[21]   ; |SAS|FSM:SM|sign_timeout[21]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[20]   ; |SAS|FSM:SM|sign_timeout[20]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[19]   ; |SAS|FSM:SM|sign_timeout[19]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[18]   ; |SAS|FSM:SM|sign_timeout[18]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[17]   ; |SAS|FSM:SM|sign_timeout[17]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[16]   ; |SAS|FSM:SM|sign_timeout[16]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[15]   ; |SAS|FSM:SM|sign_timeout[15]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[14]   ; |SAS|FSM:SM|sign_timeout[14]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[13]   ; |SAS|FSM:SM|sign_timeout[13]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[12]   ; |SAS|FSM:SM|sign_timeout[12]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[11]   ; |SAS|FSM:SM|sign_timeout[11]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[10]   ; |SAS|FSM:SM|sign_timeout[10]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[9]    ; |SAS|FSM:SM|sign_timeout[9]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[7]    ; |SAS|FSM:SM|sign_timeout[7]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[2]    ; |SAS|FSM:SM|sign_timeout[2]    ; out              ;
+; |SAS|FSM:SM|Selector1~6        ; |SAS|FSM:SM|Selector1~6        ; out0             ;
+; |SAS|sign:Sign|LessThan0~128   ; |SAS|sign:Sign|LessThan0~128   ; out0             ;
+; |SAS|sign:Sign|LessThan1~129   ; |SAS|sign:Sign|LessThan1~129   ; out0             ;
+; |SAS|sign:Sign|LessThan1~133   ; |SAS|sign:Sign|LessThan1~133   ; out0             ;
+; |SAS|counter:Counter|Add0~175  ; |SAS|counter:Counter|Add0~175  ; out0             ;
+; |SAS|counter:Counter|Add0~176  ; |SAS|counter:Counter|Add0~176  ; out0             ;
+; |SAS|counter:Counter|Add0~177  ; |SAS|counter:Counter|Add0~177  ; out0             ;
+; |SAS|counter:Counter|Add0~178  ; |SAS|counter:Counter|Add0~178  ; out0             ;
+; |SAS|counter:Counter|Add0~179  ; |SAS|counter:Counter|Add0~179  ; out0             ;
+; |SAS|counter:Counter|Add0~180  ; |SAS|counter:Counter|Add0~180  ; out0             ;
+; |SAS|counter:Counter|Add0~181  ; |SAS|counter:Counter|Add0~181  ; out0             ;
+; |SAS|counter:Counter|Add0~182  ; |SAS|counter:Counter|Add0~182  ; out0             ;
+; |SAS|counter:Counter|Add0~183  ; |SAS|counter:Counter|Add0~183  ; out0             ;
+; |SAS|counter:Counter|Add0~184  ; |SAS|counter:Counter|Add0~184  ; out0             ;
+; |SAS|counter:Counter|Add0~185  ; |SAS|counter:Counter|Add0~185  ; out0             ;
+; |SAS|counter:Counter|Add0~186  ; |SAS|counter:Counter|Add0~186  ; out0             ;
+; |SAS|counter:Counter|Add0~187  ; |SAS|counter:Counter|Add0~187  ; out0             ;
+; |SAS|counter:Counter|Add0~188  ; |SAS|counter:Counter|Add0~188  ; out0             ;
+; |SAS|counter:Counter|Add0~189  ; |SAS|counter:Counter|Add0~189  ; out0             ;
+; |SAS|counter:Counter|Add0~190  ; |SAS|counter:Counter|Add0~190  ; out0             ;
+; |SAS|counter:Counter|Add0~191  ; |SAS|counter:Counter|Add0~191  ; out0             ;
+; |SAS|counter:Counter|Add0~192  ; |SAS|counter:Counter|Add0~192  ; out0             ;
+; |SAS|counter:Counter|Add0~193  ; |SAS|counter:Counter|Add0~193  ; out0             ;
+; |SAS|counter:Counter|Add0~194  ; |SAS|counter:Counter|Add0~194  ; out0             ;
+; |SAS|counter:Counter|Add0~195  ; |SAS|counter:Counter|Add0~195  ; out0             ;
+; |SAS|counter:Counter|Add0~196  ; |SAS|counter:Counter|Add0~196  ; out0             ;
+; |SAS|counter:Counter|Add0~197  ; |SAS|counter:Counter|Add0~197  ; out0             ;
+; |SAS|counter:Counter|Add0~198  ; |SAS|counter:Counter|Add0~198  ; out0             ;
+; |SAS|counter:Counter|Add0~199  ; |SAS|counter:Counter|Add0~199  ; out0             ;
+; |SAS|counter:Counter|Add0~200  ; |SAS|counter:Counter|Add0~200  ; out0             ;
+; |SAS|counter:Counter|Add0~201  ; |SAS|counter:Counter|Add0~201  ; out0             ;
+; |SAS|counter:Counter|Add0~202  ; |SAS|counter:Counter|Add0~202  ; out0             ;
+; |SAS|counter:Counter|Add0~203  ; |SAS|counter:Counter|Add0~203  ; out0             ;
+; |SAS|counter:Counter|Add0~204  ; |SAS|counter:Counter|Add0~204  ; out0             ;
+; |SAS|counter:Counter|Add0~205  ; |SAS|counter:Counter|Add0~205  ; out0             ;
+; |SAS|counter:Counter|Add0~206  ; |SAS|counter:Counter|Add0~206  ; out0             ;
+; |SAS|counter:Counter|Add0~207  ; |SAS|counter:Counter|Add0~207  ; out0             ;
+; |SAS|counter:Counter|Add0~208  ; |SAS|counter:Counter|Add0~208  ; out0             ;
+; |SAS|counter:Counter|Add0~209  ; |SAS|counter:Counter|Add0~209  ; out0             ;
+; |SAS|counter:Counter|Add0~210  ; |SAS|counter:Counter|Add0~210  ; out0             ;
+; |SAS|counter:Counter|Add0~211  ; |SAS|counter:Counter|Add0~211  ; out0             ;
+; |SAS|counter:Counter|Add0~212  ; |SAS|counter:Counter|Add0~212  ; out0             ;
+; |SAS|counter:Counter|Add0~213  ; |SAS|counter:Counter|Add0~213  ; out0             ;
+; |SAS|counter:Counter|Add0~214  ; |SAS|counter:Counter|Add0~214  ; out0             ;
+; |SAS|counter:Counter|Add0~215  ; |SAS|counter:Counter|Add0~215  ; out0             ;
+; |SAS|counter:Counter|Add0~216  ; |SAS|counter:Counter|Add0~216  ; out0             ;
+; |SAS|counter:Counter|Add0~217  ; |SAS|counter:Counter|Add0~217  ; out0             ;
+; |SAS|counter:Counter|Add0~218  ; |SAS|counter:Counter|Add0~218  ; out0             ;
+; |SAS|counter:Counter|Add0~219  ; |SAS|counter:Counter|Add0~219  ; out0             ;
+; |SAS|counter:Counter|Add0~220  ; |SAS|counter:Counter|Add0~220  ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |SAS|counter:Counter|count~0   ; |SAS|counter:Counter|count~0   ; out              ;
+; |SAS|counter:Counter|count~1   ; |SAS|counter:Counter|count~1   ; out              ;
+; |SAS|counter:Counter|count~2   ; |SAS|counter:Counter|count~2   ; out              ;
+; |SAS|counter:Counter|count~3   ; |SAS|counter:Counter|count~3   ; out              ;
+; |SAS|counter:Counter|count~4   ; |SAS|counter:Counter|count~4   ; out              ;
+; |SAS|counter:Counter|count~5   ; |SAS|counter:Counter|count~5   ; out              ;
+; |SAS|counter:Counter|count~6   ; |SAS|counter:Counter|count~6   ; out              ;
+; |SAS|counter:Counter|count~7   ; |SAS|counter:Counter|count~7   ; out              ;
+; |SAS|counter:Counter|count~8   ; |SAS|counter:Counter|count~8   ; out              ;
+; |SAS|counter:Counter|count~9   ; |SAS|counter:Counter|count~9   ; out              ;
+; |SAS|counter:Counter|count~10  ; |SAS|counter:Counter|count~10  ; out              ;
+; |SAS|counter:Counter|count~11  ; |SAS|counter:Counter|count~11  ; out              ;
+; |SAS|counter:Counter|count~12  ; |SAS|counter:Counter|count~12  ; out              ;
+; |SAS|counter:Counter|count~13  ; |SAS|counter:Counter|count~13  ; out              ;
+; |SAS|counter:Counter|count~14  ; |SAS|counter:Counter|count~14  ; out              ;
+; |SAS|counter:Counter|count~15  ; |SAS|counter:Counter|count~15  ; out              ;
+; |SAS|counter:Counter|count~16  ; |SAS|counter:Counter|count~16  ; out              ;
+; |SAS|counter:Counter|count~17  ; |SAS|counter:Counter|count~17  ; out              ;
+; |SAS|counter:Counter|count~18  ; |SAS|counter:Counter|count~18  ; out              ;
+; |SAS|counter:Counter|count~19  ; |SAS|counter:Counter|count~19  ; out              ;
+; |SAS|counter:Counter|count~20  ; |SAS|counter:Counter|count~20  ; out              ;
+; |SAS|counter:Counter|count~21  ; |SAS|counter:Counter|count~21  ; out              ;
+; |SAS|counter:Counter|count~22  ; |SAS|counter:Counter|count~22  ; out              ;
+; |SAS|counter:Counter|count[8]  ; |SAS|counter:Counter|count[8]  ; regout           ;
+; |SAS|counter:Counter|count[9]  ; |SAS|counter:Counter|count[9]  ; regout           ;
+; |SAS|counter:Counter|count[10] ; |SAS|counter:Counter|count[10] ; regout           ;
+; |SAS|counter:Counter|count[11] ; |SAS|counter:Counter|count[11] ; regout           ;
+; |SAS|counter:Counter|count[12] ; |SAS|counter:Counter|count[12] ; regout           ;
+; |SAS|counter:Counter|count[13] ; |SAS|counter:Counter|count[13] ; regout           ;
+; |SAS|counter:Counter|count[14] ; |SAS|counter:Counter|count[14] ; regout           ;
+; |SAS|counter:Counter|count[15] ; |SAS|counter:Counter|count[15] ; regout           ;
+; |SAS|counter:Counter|count[16] ; |SAS|counter:Counter|count[16] ; regout           ;
+; |SAS|counter:Counter|count[17] ; |SAS|counter:Counter|count[17] ; regout           ;
+; |SAS|counter:Counter|count[18] ; |SAS|counter:Counter|count[18] ; regout           ;
+; |SAS|counter:Counter|count[19] ; |SAS|counter:Counter|count[19] ; regout           ;
+; |SAS|counter:Counter|count[20] ; |SAS|counter:Counter|count[20] ; regout           ;
+; |SAS|counter:Counter|count[21] ; |SAS|counter:Counter|count[21] ; regout           ;
+; |SAS|counter:Counter|count[22] ; |SAS|counter:Counter|count[22] ; regout           ;
+; |SAS|counter:Counter|count[23] ; |SAS|counter:Counter|count[23] ; regout           ;
+; |SAS|counter:Counter|count[24] ; |SAS|counter:Counter|count[24] ; regout           ;
+; |SAS|counter:Counter|count[25] ; |SAS|counter:Counter|count[25] ; regout           ;
+; |SAS|counter:Counter|count[26] ; |SAS|counter:Counter|count[26] ; regout           ;
+; |SAS|counter:Counter|count[27] ; |SAS|counter:Counter|count[27] ; regout           ;
+; |SAS|counter:Counter|count[28] ; |SAS|counter:Counter|count[28] ; regout           ;
+; |SAS|counter:Counter|count[29] ; |SAS|counter:Counter|count[29] ; regout           ;
+; |SAS|counter:Counter|count[30] ; |SAS|counter:Counter|count[30] ; regout           ;
+; |SAS|counter:Counter|count[31] ; |SAS|counter:Counter|count[31] ; regout           ;
+; |SAS|FSM:SM|sign_timeout[31]   ; |SAS|FSM:SM|sign_timeout[31]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[30]   ; |SAS|FSM:SM|sign_timeout[30]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[29]   ; |SAS|FSM:SM|sign_timeout[29]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[28]   ; |SAS|FSM:SM|sign_timeout[28]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[27]   ; |SAS|FSM:SM|sign_timeout[27]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[26]   ; |SAS|FSM:SM|sign_timeout[26]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[25]   ; |SAS|FSM:SM|sign_timeout[25]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[24]   ; |SAS|FSM:SM|sign_timeout[24]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[23]   ; |SAS|FSM:SM|sign_timeout[23]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[22]   ; |SAS|FSM:SM|sign_timeout[22]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[21]   ; |SAS|FSM:SM|sign_timeout[21]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[20]   ; |SAS|FSM:SM|sign_timeout[20]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[19]   ; |SAS|FSM:SM|sign_timeout[19]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[18]   ; |SAS|FSM:SM|sign_timeout[18]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[17]   ; |SAS|FSM:SM|sign_timeout[17]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[16]   ; |SAS|FSM:SM|sign_timeout[16]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[15]   ; |SAS|FSM:SM|sign_timeout[15]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[14]   ; |SAS|FSM:SM|sign_timeout[14]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[13]   ; |SAS|FSM:SM|sign_timeout[13]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[12]   ; |SAS|FSM:SM|sign_timeout[12]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[11]   ; |SAS|FSM:SM|sign_timeout[11]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[10]   ; |SAS|FSM:SM|sign_timeout[10]   ; out              ;
+; |SAS|FSM:SM|sign_timeout[9]    ; |SAS|FSM:SM|sign_timeout[9]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[8]    ; |SAS|FSM:SM|sign_timeout[8]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[7]    ; |SAS|FSM:SM|sign_timeout[7]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[6]    ; |SAS|FSM:SM|sign_timeout[6]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[4]    ; |SAS|FSM:SM|sign_timeout[4]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[2]    ; |SAS|FSM:SM|sign_timeout[2]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[1]    ; |SAS|FSM:SM|sign_timeout[1]    ; out              ;
+; |SAS|FSM:SM|sign_timeout[0]    ; |SAS|FSM:SM|sign_timeout[0]    ; out              ;
+; |SAS|sign:Sign|LessThan1~128   ; |SAS|sign:Sign|LessThan1~128   ; out0             ;
+; |SAS|sign:Sign|LessThan1~129   ; |SAS|sign:Sign|LessThan1~129   ; out0             ;
+; |SAS|sign:Sign|LessThan1~130   ; |SAS|sign:Sign|LessThan1~130   ; out0             ;
+; |SAS|sign:Sign|LessThan1~131   ; |SAS|sign:Sign|LessThan1~131   ; out0             ;
+; |SAS|sign:Sign|LessThan1~133   ; |SAS|sign:Sign|LessThan1~133   ; out0             ;
+; |SAS|counter:Counter|Add0~175  ; |SAS|counter:Counter|Add0~175  ; out0             ;
+; |SAS|counter:Counter|Add0~176  ; |SAS|counter:Counter|Add0~176  ; out0             ;
+; |SAS|counter:Counter|Add0~177  ; |SAS|counter:Counter|Add0~177  ; out0             ;
+; |SAS|counter:Counter|Add0~178  ; |SAS|counter:Counter|Add0~178  ; out0             ;
+; |SAS|counter:Counter|Add0~179  ; |SAS|counter:Counter|Add0~179  ; out0             ;
+; |SAS|counter:Counter|Add0~180  ; |SAS|counter:Counter|Add0~180  ; out0             ;
+; |SAS|counter:Counter|Add0~181  ; |SAS|counter:Counter|Add0~181  ; out0             ;
+; |SAS|counter:Counter|Add0~182  ; |SAS|counter:Counter|Add0~182  ; out0             ;
+; |SAS|counter:Counter|Add0~183  ; |SAS|counter:Counter|Add0~183  ; out0             ;
+; |SAS|counter:Counter|Add0~184  ; |SAS|counter:Counter|Add0~184  ; out0             ;
+; |SAS|counter:Counter|Add0~185  ; |SAS|counter:Counter|Add0~185  ; out0             ;
+; |SAS|counter:Counter|Add0~186  ; |SAS|counter:Counter|Add0~186  ; out0             ;
+; |SAS|counter:Counter|Add0~187  ; |SAS|counter:Counter|Add0~187  ; out0             ;
+; |SAS|counter:Counter|Add0~188  ; |SAS|counter:Counter|Add0~188  ; out0             ;
+; |SAS|counter:Counter|Add0~189  ; |SAS|counter:Counter|Add0~189  ; out0             ;
+; |SAS|counter:Counter|Add0~190  ; |SAS|counter:Counter|Add0~190  ; out0             ;
+; |SAS|counter:Counter|Add0~191  ; |SAS|counter:Counter|Add0~191  ; out0             ;
+; |SAS|counter:Counter|Add0~192  ; |SAS|counter:Counter|Add0~192  ; out0             ;
+; |SAS|counter:Counter|Add0~193  ; |SAS|counter:Counter|Add0~193  ; out0             ;
+; |SAS|counter:Counter|Add0~194  ; |SAS|counter:Counter|Add0~194  ; out0             ;
+; |SAS|counter:Counter|Add0~195  ; |SAS|counter:Counter|Add0~195  ; out0             ;
+; |SAS|counter:Counter|Add0~196  ; |SAS|counter:Counter|Add0~196  ; out0             ;
+; |SAS|counter:Counter|Add0~197  ; |SAS|counter:Counter|Add0~197  ; out0             ;
+; |SAS|counter:Counter|Add0~198  ; |SAS|counter:Counter|Add0~198  ; out0             ;
+; |SAS|counter:Counter|Add0~199  ; |SAS|counter:Counter|Add0~199  ; out0             ;
+; |SAS|counter:Counter|Add0~200  ; |SAS|counter:Counter|Add0~200  ; out0             ;
+; |SAS|counter:Counter|Add0~201  ; |SAS|counter:Counter|Add0~201  ; out0             ;
+; |SAS|counter:Counter|Add0~202  ; |SAS|counter:Counter|Add0~202  ; out0             ;
+; |SAS|counter:Counter|Add0~203  ; |SAS|counter:Counter|Add0~203  ; out0             ;
+; |SAS|counter:Counter|Add0~204  ; |SAS|counter:Counter|Add0~204  ; out0             ;
+; |SAS|counter:Counter|Add0~205  ; |SAS|counter:Counter|Add0~205  ; out0             ;
+; |SAS|counter:Counter|Add0~206  ; |SAS|counter:Counter|Add0~206  ; out0             ;
+; |SAS|counter:Counter|Add0~207  ; |SAS|counter:Counter|Add0~207  ; out0             ;
+; |SAS|counter:Counter|Add0~208  ; |SAS|counter:Counter|Add0~208  ; out0             ;
+; |SAS|counter:Counter|Add0~209  ; |SAS|counter:Counter|Add0~209  ; out0             ;
+; |SAS|counter:Counter|Add0~210  ; |SAS|counter:Counter|Add0~210  ; out0             ;
+; |SAS|counter:Counter|Add0~211  ; |SAS|counter:Counter|Add0~211  ; out0             ;
+; |SAS|counter:Counter|Add0~212  ; |SAS|counter:Counter|Add0~212  ; out0             ;
+; |SAS|counter:Counter|Add0~213  ; |SAS|counter:Counter|Add0~213  ; out0             ;
+; |SAS|counter:Counter|Add0~214  ; |SAS|counter:Counter|Add0~214  ; out0             ;
+; |SAS|counter:Counter|Add0~215  ; |SAS|counter:Counter|Add0~215  ; out0             ;
+; |SAS|counter:Counter|Add0~216  ; |SAS|counter:Counter|Add0~216  ; out0             ;
+; |SAS|counter:Counter|Add0~217  ; |SAS|counter:Counter|Add0~217  ; out0             ;
+; |SAS|counter:Counter|Add0~218  ; |SAS|counter:Counter|Add0~218  ; out0             ;
+; |SAS|counter:Counter|Add0~219  ; |SAS|counter:Counter|Add0~219  ; out0             ;
+; |SAS|counter:Counter|Add0~220  ; |SAS|counter:Counter|Add0~220  ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 7.1 Build 156 04/30/2007 SJ Full Version
+    Info: Processing started: Thu Nov 26 10:56:37 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off lab7 -c lab7
+Info: Using vector source file "Tests/SAS.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      52.38 %
+Info: Number of transitions in simulation is 9046
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Allocated 140 megabytes of memory during processing
+    Info: Processing ended: Thu Nov 26 10:56:38 2015
+    Info: Elapsed time: 00:00:01
+
+
